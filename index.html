@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar" dir ="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.css"> 
+
+    <link rel="stylesheet" href="assets/css/mystyles.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+  
+</head>
+<body>
+
+    <!-- --start  main container .................................. -->
+    <div class="main-wrapper">
+        <!-- --start nav bar  ------------------------------- -->
+        <nav class="fixed-top">
+              <!-- --start header   ------------------------------- -->
+            <header class="header d-flex justify-content-between py-1">
+
+
+                 <!-- start right  side -------------------------------- -->
+                <div class="right-header d-flex align-items-center gap-3 ">
+                    <!-- start logo section..................... -->
+                   <div class="logo d-none d-md-block">
+                        <a href="index.html">لوحة تحكم المتجر</a>
+                   </div>
+                   <!-- ايقونة سلايد بار اللائحة  -->
+                  <div class="px-4">
+                         <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toogle"></i> </a>
+                  </div>
+                   <!-- مربع للبحث  -->
+                    <form action="" class=" d-none d-md-block">
+                        <input type="text" class="form-control" placeholder= " ادخل نص للبحث">
+                    </form>
+                <!--end logo section .............................  -->
+
+                </div> 
+
+                <!-- end right side -------------------------------- -->
+
+                <!-- start left side -------------------------------- -->
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+
+                    <!--start  left icons  part -->
+                    <div class="icons d-flex gap-3">
+                        <a href="">
+                            <i class="fa-regular fa-comment"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                        <a class="position-relative bell"  href="">
+                            <i class="fa-regular fa-bell"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-compress"></i>
+                          
+                        </a>
+                    </div>
+
+                    <!-- start avatar part  -->
+                     <div class="avatar">
+                        <img  src="assets/images/icons/adminavaar.png"  alt="avatar">
+                     </div>
+                    <!-- end avatar part  -->
+
+                     <!-- start bar-icon -->
+                     <a href="">
+                         <i class="fa-solid fa-bars-staggered active-users"></i>
+                      </a>
+                    <!-- end bar-icon -->
+
+                    <!--end  left icons  part -->
+
+
+
+                </div> 
+                <!-- end left side -------------------------------- -->
+
+            </header>
+             <!-- end header-------------------------------------  -->
+
+         </nav>
+        <!-- end nav bar-------------------------------------  -->
+
+         <!-- start side-bar ------------------------------------ -->
+         <div class="sidebar" id="sidebar">
+            <!-- start user profile part  ...................-->
+             <div class="profile " >
+
+                <img width="80px" src="assets/images/icons/adminavaar.png" alt="">
+                <h3>علاء فلوح </h3>
+             </div>
+
+             <!-- end user profile part ..................... -->
+
+             <!-- start ul-sidebar ....................... -->
+              <ul class="ul-slidebar">
+                   <li class="mb-2 active">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="" class="m-r-10">الصفحة الرئيسية</a>
+                   </li>
+                   <li class="mb-2">
+                    <i class="fa-solid fa-bottle-water  fs-5"></i>
+                      
+                       <a href="" class="m-r-10" >تصنيفات المنتجات  </a>
+                   </li>
+                   <li class="mb-2">
+                        <i class="fa-solid fa-cubes-stacked  fs-5"></i>
+                       
+                       <a href="" class="m-r-10"> المنتجات</a>
+                   </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-bowl-rice fs-5"></i>
+                     
+                       <a href="" class="m-r-10"> الحبوب</a>
+                   </li>
+                   <li class="mb-2">
+                        <i class="fa-solid fa-seedling fs-5"></i>
+                        <a href="" class="m-r-10"> الخضار</a>
+                   </li>
+                   <li class="mb-2">
+                         <i class="fa-solid fa-jar fs-5"></i>
+                       <a href="" class="m-r-10"> المونة</a>
+                   </li>
+                   <li class="mb-2">
+                        <i class="fa-solid fa-shirt fs-5"></i>
+                        <a href="" class="m-r-10"> النسيج</a>
+                   </li>
+                   <li class="mb-2">
+                    <i class="fa-solid fa-utensils fs-5"></i>
+                     
+                       <a href="" class="m-r-10"> الوجبات</a>
+                   </li>
+                   <li class="mb-2">
+                    <i class="fa-solid fa-jar-wheat fs-5"></i>
+                      
+                       <a href="" class="m-r-10"> المربيات</a>
+                   </li>
+                   <li class="mb-2">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="" class="m-r-10"> احدث المنتجات</a>
+                   </li>
+                   <li class="mb-2">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="" class="m-r-10"> احدث المواد</a>
+                   </li>
+                   <li class="mb-2">
+                   
+                      <i class="fa-solid fa-arrow-down-a-z fs-5"></i>
+                       <a href="" class="m-r-10">تبويب المنتجات</a>
+                   </li>
+                   <li class="mb-2">
+                       
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                       <a href="" class="m-r-10"> السلة</a>
+                   </li>
+                   <li class="mb-2">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="" class="m-r-10"> فلاتر البحث</a>
+                   </li>
+                   
+                   <li class="mb-2">
+                    <i class="fa-regular fa-bell-slash fs-5"></i>
+                     
+                       <a href="" class="m-r-10"> العروض الاسبوعية</a>
+                   </li>
+                   <li class="mb-2">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="" class="m-r-10">اهم المنتجات</a>
+                   </li>
+                   <li class="mb-2">
+                    <i class="fa-solid fa-volume-high fs-5"></i>
+                       <a href="" class="m-r-10"> الدعاية والاعلان</a>
+                   </li>
+                   <li class="mb-2">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="" class="m-r-10">حول المتجر</a>
+                   </li>
+                   <li class="mb-2">
+                    <i class="fa-solid fa-gear fs-5"></i>
+                       <a href="" class="m-r-10"> الاعدادات</a>
+                   </li>
+                   <li class="mb-2">
+                        <i class="fa-solid fa-user-tie fs-5"></i>
+                       
+                       <a href="" class="m-r-10"> المستخدمين</a>
+                   </li>
+                   <li class="mb-2">
+                    <i class="fa-solid fa-hand fs-5"></i>
+                      
+                       <i class="fa-solid fa-shield-halved fs-5"></i>
+                       <a href="" class="m-r-10"> الصلاحيات</a>
+                   </li>
+                    
+
+                  
+              </ul>
+
+             <!-- end ul-sidebar  ........................-->
+
+         </div>
+        <!-- end side-bar ------------------------------------ -->
+
+        <!-- start contents     ------------------------------------ -->
+           <div class="content p-3" id ="content">
+                <div class="inner-content p-3">
+                    <div class="container-fluid">
+                        <div class="row gap-2 flex-wrap flex-md-nowrap">
+
+<!-- ---------------------------------------- -->
+                            <div class="col-md-3 stat stat-red flex-shrink-1">
+                                <div>
+                                    <h3 class="mb-3">عدد المنتجات</h3>
+                                    <h4>60 منتج </h4>
+                                    <p>يتم تحديث العدد بشكل يومي </p>       
+
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-cubes-stacked  fs-1"></i>
+                                </div>
+                            
+                            </div>
+<!-- ------------------------------------------- -->
+<!-- ---------------------------------------- -->
+                            <div class="col-md-3 stat stat-green flex-shrink-1">
+                                <div>
+                                      <h3 class="mb-3">طلبيات اليوم </h3>
+                                    <h4>42 طلبية </h4>
+                                    <p>يتم تحديث العدد بشكل يومي </p>       
+
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-cart-shopping fs-1"></i>
+                                   
+                                </div>
+                            
+                            </div>
+<!-- ------------------------------------------- -->
+<!-- ---------------------------------------- -->
+                            <div class="col-md-3 stat stat-blue flex-shrink-1">
+                                <div>
+                                    <h3 class="mb-3">عدد الزوار</h3>
+                                    <h4>350 زائر </h4>
+                                    <p>يتم تحديث العدد بشكل يومي </p>       
+
+                                </div>
+                                <div>
+                                     <i class="fa-solid fa-user-tie fs-5 fs-1"></i>
+                                   
+                                </div>
+                            
+                            </div>
+<!-- ------------------------------------------- -->
+<!-- ---------------------------------------- -->
+                            <div class="col-md-3 stat stat-yellow flex-shrink-1">
+                                <div>
+                                  
+                                    <h3 class="mb-3">المبيعات لتاريخه </h3>
+                                    <h4>7500 $ </h4>
+                                    <p>يتم تحديث العدد بشكل يومي </p>       
+
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-dollar-sign fs-1"></i>
+                                    
+                                </div>
+                            
+                            </div>
+<!-- ------------------------------------------- -->
+
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-6 mb-3">
+                                <div class="card chart">
+                                    <!-- <p class="text-center">  تحليل الايرادات السنوية</p> -->
+                                 <div id="chart">
+                                    
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card chart1">
+                                   
+                                 <div id="chart1" >
+                                    
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+             <!-- end contents     ------------------------------------ -->
+     </div>
+    <!-- -- end main container  ................................... -->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@8.3.1/dist/apexcharts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- isotop -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/bootstrap.js" ></script>
+<script src="assets/js/script.js" ></script>
+</body>
+</html>
