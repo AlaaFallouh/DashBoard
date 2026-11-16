@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>cart</title>
+   <link rel="stylesheet" href="assets/css/datatables.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
+
+      <!-- <link rel="stylesheet" href="assets/css/bootstrap5-3.css">  -->
+         <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/css/mystyles.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+        window.onload = function() {
+            document.getElementById("loader").style.display = "none";  
+    };
+
+  </script>
+
+</head>
+<body>
+<header>
+<div class="" id="loader">
+   <img width="100" src="assets/images/icons/loader.png" alt=""> 
+</div>
+    <!-- --start  main container .................................. -->
+    <div class="main-wrapper">
+        <!-- --start nav bar  ------------------------------- -->
+        <nav class="fixed-top">
+              <!-- --start header   ------------------------------- -->
+            <header class="header d-flex justify-content-between py-1">
+
+
+                 <!-- start right  side -------------------------------- -->
+                <div class="right-header d-flex align-items-center gap-3 ">
+                    <!-- start logo section..................... -->
+                   <div class="logo d-none d-md-block">
+                        <a href="index.html">لوحة تحكم المتجر</a>
+                   </div>
+                   <!-- ايقونة سلايد بار اللائحة  -->
+                  <div class="px-4">
+                         <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toogle"></i> </a>
+                  </div>
+                   <!-- مربع للبحث  -->
+                    <form action="" class=" d-none d-md-block">
+                        <input type="text" class="form-control" placeholder= " ادخل نص للبحث">
+                    </form>
+                <!--end logo section .............................  -->
+
+                </div> 
+
+                <!-- end right side -------------------------------- -->
+
+                <!-- start left side -------------------------------- -->
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+
+                    <!--start  left icons  part -->
+                    <div class="icons d-flex gap-3">
+                        
+                       
+                      <!-- start notes menu----------------------------------------------------------------------- -->
+
+                            <div class="messages-container position-relative " id="notes-container-prod">
+                                  <i class="fa-regular fa-comment"></i>
+                                <ul class="messages-area position-absolute text-center" id="notes-area-prod">
+                                    <div class="messages-header">
+                                        <h3> التعليقات </h3>
+                                    </div>
+
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/adminavaar.png" alt="">
+                                            <h4> كابتن ماجد</h4>
+                                        </div>
+                                         <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                 
+                                   <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/moukly.png" alt="">
+                                            <h4>  ماوكلي</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/sandibel.png" alt="">
+                                            <h4> ساندي بل </h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                     <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/konan.png" alt="">
+                                            <h4>  كونان</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                   
+                                    <!-- ----------------------------------------------------- -->
+                                    <a href="">كافة التعليقات </a>
+
+                                </ul>
+
+
+                            </div>
+                           
+
+                        <!-- end notes--------------------------------------------------------------------------- -->
+
+
+
+                        <!-- start messages menu----------------------------------------------------------------------- -->
+
+                            <div class="messages-container position-relative " id="messages-container-prod">
+                                 <i class="fa-regular fa-envelope"></i>
+                                <ul class="messages-area position-absolute text-center" id="messages-area-prod">
+                                    <div class="messages-header">
+                                        <h3> الرسائل </h3>
+                                    </div>
+
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/adminavaar.png" alt="">
+                                            <h4> كابتن ماجد</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                 
+                                   <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/moukly.png" alt="">
+                                            <h4>  ماوكلي</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/sandibel.png" alt="">
+                                            <h4> ساندي بل </h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                     <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/konan.png" alt="">
+                                            <h4>  كونان</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                 
+                                    <!-- ----------------------------------------------------- -->
+                                    <a href="">كافة الرسائل </a>
+
+                                </ul>
+
+
+                            </div>
+                           
+
+                        <!-- end messages--------------------------------------------------------------------------- -->
+
+
+
+                        <!-- <a class="position-relative bell"  href="">
+                            <i class="fa-regular fa-bell"></i>
+                        </a> -->
+ <!-- start bells menu----------------------------------------------------------------------- -->
+
+                            <div class="position-relative bell messages-container position-relative " id="bells-container-prod">
+                                  <i class="fa-regular fa-bell "></i>
+                                <ul class="messages-area position-absolute text-center" id="bells-area-prod">
+                                    <div class="messages-header">
+                                        <h3> التذكيرات </h3>
+                                    </div>
+
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/adminavaar.png" alt="">
+                                            <h4> كابتن ماجد</h4>
+                                        </div>
+                                         <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                 
+                                   <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/moukly.png" alt="">
+                                            <h4>  ماوكلي</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/sandibel.png" alt="">
+                                            <h4> ساندي بل </h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                     <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/konan.png" alt="">
+                                            <h4>  كونان</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                   
+                                    <!-- ----------------------------------------------------- -->
+                                    <a href="">كافة التذكيرات </a>
+
+                                </ul>
+
+
+                            </div>
+                           
+
+                        <!-- end notes--------------------------------------------------------------------------- -->
+
+
+
+
+                        <a href="">
+                            <i class="fa-solid fa-compress"></i>
+                          
+                        </a>
+                    </div>
+
+                    <!-- start avatar part  -->
+                     <div class="avatar">
+                        <img  src="assets/images/icons/adminavaar.png"  alt="avatar">
+                     </div>
+                    <!-- end avatar part  -->
+
+                     <!-- start bar-icon -->
+                     <a data-bs-toggle="offcanvas" href="#users-online">
+                         <i class="fa-solid fa-bars-staggered active-users"></i>
+                      </a>
+                    <!-- end bar-icon -->
+
+                    <!--end  left icons  part -->
+
+
+
+                </div> 
+                <!-- end left side -------------------------------- -->
+
+            </header>
+             <!-- end header-------------------------------------  -->
+
+         </nav>
+        <!-- end nav bar-------------------------------------  -->
+
+         <!-- start side-bar ------------------------------------ -->
+         <div class="sidebar" id="sidebar">
+            <!-- start user profile part  ...................-->
+             <div class="profile " >
+
+                <img width="80px" src="assets/images/icons/adminavaar.png" alt="">
+                <h3>علاء فلوح </h3>
+             </div>
+
+             <!-- end user profile part ..................... -->
+
+             <!-- start ul-sidebar ....................... -->
+              <ul class="ul-slidebar">
+                   <li class="mb-2 ">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="index.html" class="m-r-10">الصفحة الرئيسية</a>
+                   </li>
+                   <li class="mb-2">
+                    <i class="fa-solid fa-bottle-water  fs-5"></i>
+                      
+                       <a href="productsCatigoryes.html" class="m-r-10" >تصنيفات المنتجات  </a>
+                   </li>
+                   <li class="mb-2">
+                        <i class="fa-solid fa-cubes-stacked  fs-5"></i>
+                       
+                       <a href="products.html" class="m-r-10"> المنتجات</a>
+                   </li>
+                   
+                    
+                   <li class="mb-2">
+                                            
+                       <i class="fa-solid fa-shield-halved fs-5"></i>
+                       <a href="blog.html" class="m-r-10"> المدونة</a>
+                   </li>
+                 
+                  
+                 
+                   <li class="mb-2 active">
+                       
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                       <a href="cart.html" class="m-r-10"> السلة</a>
+                   </li>
+                   <li class="mb-2">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="filters.html" class="m-r-10"> فلاتر البحث</a>
+                   </li>
+                   
+                   <li class="mb-2">
+                    <i class="fa-regular fa-bell-slash fs-5"></i>
+                     
+                       <a href="weklyOffers.html" class="m-r-10"> العروض الاسبوعية</a>
+                   </li>
+                  
+                   <li class="mb-2">
+                    <i class="fa-solid fa-volume-high fs-5"></i>
+                       <a href="Advertisements.html" class="m-r-10"> الدعاية والاعلان</a>
+                   </li>
+                   <li class="mb-2">
+                       <i class="fa-solid fa-house-user  fs-5"></i>
+                       <a href="categoey-about.html" class="m-r-10">حول المتجر</a>
+                   </li>
+                   <li class="mb-2">
+                    <i class="fa-solid fa-gear fs-5"></i>
+                       <a href="settings.html" class="m-r-10"> الاعدادات</a>
+                   </li>
+                   <li class="mb-2">
+                        <i class="fa-solid fa-user-tie fs-5"></i>
+                       
+                       <a href="users.html" class="m-r-10"> المستخدمين</a>
+                   </li>
+                 
+                  
+                    
+                    
+
+                  
+              </ul>
+
+
+             <!-- end ul-sidebar  ........................-->
+
+         </div>
+        <!-- end side-bar ------------------------------------ -->
+
+        <!-- start contents     ------------------------------------ -->
+           <div class="content p-3" id ="content">
+                <div class="inner-content p-3">
+                    <div class="container-fluid">
+                        <h4>السلة  </h4>
+                                 
+                         <!-- <button class="btn btn-primary my-3 add-btn">اضافة منتج جديد</button> -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-product">
+                            اضافة مادة جديد
+                        </button>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="card p-3">
+                                   <table class="table table-hover display example" id="example">
+                                    <thead class="tblhead">
+                                        <tr >
+                                            <th scope="col">#</th>
+                                            <th scope="col">رمز المنتج</th>
+                                            <th scope="col">اسم المنتج</th>
+                                            <th scope="col">وصف المنتج</th>
+                                            <th scope="col">السعر</th>
+                                            <th scope="col">الحالة</th>
+                                           <th scope="col">الصورة</th>
+                                            <th scope="col">العمليات</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- ------------------------------------------------------------- -->
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>st00001</td>
+                                            <td>زيتون اخضر</td>
+                                            <td>  زيتون اخضر نوع اسطنبولي محلى ومنكه </td>
+                                            <td>1.2$</td>
+                                            <td>
+                                              <div style="width:10px ; height:10px " class="spinner-grow text-success" role="status">
+                                                  <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+
+                                            <td><img src="assets/images/mails/oliveg.png" class="rounded-circle pimg" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class=" btn btn-warning btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                         العمليات
+                                                    </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">اضافة منتج </a></li>
+                                                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#edit-product">تعديل</a></li>
+                                                            <li><a class="dropdown-item" href="#">التفاصيل</a></li>   
+                                                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#delete-product">حذف </a></li>
+                                                        </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- -------------------------------------------------------------- -->
+                                         
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>st00002</td>
+                                            <td>زيتون سود</td>
+                                            <td>  زيتون اسود نوع اسطنبولي محلى ومنكه </td>
+                                            <td>1.2$</td>
+                                            <td>
+                                              <div style="width:10px ; height:10px " class="spinner-grow text-success" role="status">
+                                                  <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+
+                                            <td><img src="assets/images/mails/oliveb.png" class="rounded-circle pimg" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class=" btn btn-warning btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                         العمليات
+                                                    </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">اضافة منتج </a></li>
+                                                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#edit-product">تعديل</a></li>
+                                                            <li><a class="dropdown-item" href="#">التفاصيل</a></li>   
+                                                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#delete-product">حذف </a></li>
+                                                        </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- -------------------------------------------------------------- -->
+                                         
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>st00003</td>
+                                            <td> مكدوس</td>
+                                            <td>  باذنجان مسلوق وملح ومحشي جوز  وفليفة وثوم </td>
+                                            <td>1.2$</td>
+                                            <td>
+                                              <div style="width:10px ; height:10px " class="spinner-grow text-success" role="status">
+                                                  <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+
+                                            <td><img src="assets/images/mails/makdous.png" class="rounded-circle pimg" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class=" btn btn-warning btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                         العمليات
+                                                    </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">اضافة منتج </a></li>
+                                                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#edit-product">تعديل</a></li>
+                                                            <li><a class="dropdown-item" href="#">التفاصيل</a></li>   
+                                                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#delete-product">حذف </a></li>
+                                                        </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- -------------------------------------------------------------- -->
+                                         
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>st00004</td>
+                                            <td> شنكليش</td>
+                                            <td>  شرش الجبن او اللبن  مغلي ومصفى ومنكه </td>
+                                            <td>1.2$</td>
+                                            <td>
+                                              <div style="width:10px ; height:10px " class="spinner-grow text-success" role="status">
+                                                  <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+
+                                            <td><img src="assets/images/mails/chanklish.png" class="rounded-circle pimg" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class=" btn btn-warning btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                         العمليات
+                                                    </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">اضافة منتج </a></li>
+                                                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#edit-product">تعديل</a></li>
+                                                            <li><a class="dropdown-item" href="#">التفاصيل</a></li>   
+                                                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#delete-product">حذف </a></li>
+                                                        </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- -------------------------------------------------------------- -->
+                                        
+                                        <!-- -------------------------------------------------------------- -->
+                                         
+                                       
+                                       
+                                    </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+             </div>
+             <!-- end contents     ------------------------------------ -->
+     </div>
+    <!-- -- end main container  ................................... -->
+
+
+ <!-- start add studet -------------------------------------------------------------------------------------------------- -->
+     <!-- Button trigger modal -->
+<!-- Modal ==============================================================================================================-->
+<div class="modal fade" id="add-product" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">اضافة منتج جديد</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- start form  ------------------------------------------------------------------------------------>
+        <form>
+            <div class="row ">
+                <div class="mb-3 col-4">
+                    <label  class="form-label">رمز المنتج</label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال رمز المنتج">
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 col-8">
+                    <label  class="form-label">اسم المنتج</label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال اسم المنتج">
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-9">
+                    <label  class="form-label">وصف المنتج</label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال وصف المنتج " >
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 col-3">
+                    <label  class="form-label"> السعر</label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال السعر" >
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+            </div>  
+            <div>
+                <label  class="form-label"> ملاحظات </label>
+                <textarea class="form-control"  name="mem" id=""></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label"> تحميل صورة المنتج </label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <!-- <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        </form>
+
+
+        <!-- end form  ---------------------------------------------------------------------------->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+        <button type="button" class="btn btn-primary">حفظ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal ===========================================================================================================-->
+<!-- end add product ------------------------------------------------------------------------------------------------------>
+
+ <!-- start edit studet -------------------------------------------------------------------------------------------------- -->
+     <!-- Button trigger modal -->
+<!-- Modal ==============================================================================================================-->
+<div class="modal fade" id="edit-product" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"> تعديل معلومات المنتج</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- start form  ------------------------------------------------------------------------------------>
+        <form>
+            <div class="row ">
+                <div class="mb-3 col-2">
+                    <label  class="form-label">رمز المنتج</label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال رمز المنتج" value="st00001">
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 col-5">
+                    <label  class="form-label">اسم المنتج</label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال اسم المنتج" value="زيتون اخضر">
+                </div>
+               
+            </div>
+            <div class="row">
+                <p>cdfr ffffffff</p>
+                <div class="mb-3 col-5">
+                    <label  class="form-label">وصف المنتج</label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال وصف المنتج " value="زيتون اخضر نوع اسطنبولي محلى ومنكه " >
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 col-3">
+                    <label  class="form-label"> السعر</label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال السعر" value="1.2$" >
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                 <div class="mb-3 col-2">
+                    <label  class="form-label">تصنيف المنتج </label>
+                    <input type="text" class="form-control" placeholder="الرجاء ادخال تصنيف المنتج" value="مونة">
+                 </div>
+            </div>  
+            <div>
+                <label  class="form-label"> ملاحظات </label>
+                <textarea class="form-control"  name="mem" id=""></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label"> تحميل صورة المنتج </label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <!-- <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        </form>
+
+
+        <!-- end form  ---------------------------------------------------------------------------->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+        <button type="button" class="btn btn-primary">حفظ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal ===========================================================================================================-->
+<!-- end edit product ------------------------------------------------------------------------------------------------------>
+
+
+ <!-- start delete studet -------------------------------------------------------------------------------------------------- -->
+     <!-- Button trigger modal -->
+<!-- Modal ==============================================================================================================-->
+<div class="modal fade" id="delete-product" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"> حذف  المنتج</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- start form  ------------------------------------------------------------------------------------>
+        <form>
+            <div class="alert alert-danger ">
+                هل انت متأكد من حذف المنتج ؟
+            </div>
+
+
+ <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">اغلاق</button>
+        <button type="button" class="btn btn-danger">حذف بيانات المنتج </button>
+      </div>
+
+
+        </form>
+
+
+        <!-- end form  ---------------------------------------------------------------------------->
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!-- end modal ===========================================================================================================-->
+<!-- end delet product ------------------------------------------------------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- start offcanvas user online list============================================================================ -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="users-online" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header ">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">المستخدمين المتصلين </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="alert alert-success">
+        كافة المستخدمين النشطين 
+    </div>
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>ايمن الاحمد </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>سليم سالم </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>مروان سعد  </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>خالد الاحمد </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>محمد احمد </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+
+  </div>
+</div>
+ <!-- end offcanvas============================================================================== -->
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@8.3.1/dist/apexcharts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- isotop -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="assets/js/datatables.js"></script>
+<script src="assets/js/charts.js"></script>
+
+<!-- <script src="assets/js/datatables.js"></script> -->
+
+<script src="assets/js/bootstrap5-3.js" ></script>
+<script src="assets/js/bootstrap.js" ></script>
+<!-- <script src="assets/js/script.js" ></script> -->
+<script src="assets/js/scriptprod.js" ></script>
+</html>
