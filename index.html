@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard</title>
-
+  <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <link rel="stylesheet" href="assets/css/bootstrap.css"> 
@@ -13,14 +14,22 @@
     <link rel="stylesheet" href="assets/css/mystyles.css">
     
     <link rel="stylesheet" href="assets/css/style.css">
-  
+  <script>
+        window.onload = function() {
+            document.getElementById("loader").style.display = "none";  
+    };
+
+  </script>
 </head>
 <body>
+<div class="" id="loader">
+   <img width="100" src="assets/images/icons/loader.png" alt=""> 
+</div>
 
-    <!-- --start  main container .................................. -->
-    <div class="main-wrapper">
-        <!-- --start nav bar  ------------------------------- -->
-        <nav class="fixed-top">
+ <!-- --start  main container .................................. -->
+<div class="main-wrapper">
+     <!-- --start nav bar  ------------------------------- -->
+    <nav class="fixed-top">
               <!-- --start header   ------------------------------- -->
             <header class="header d-flex justify-content-between py-1">
 
@@ -50,15 +59,170 @@
 
                     <!--start  left icons  part -->
                     <div class="icons d-flex gap-3">
-                        <a href="">
-                            <i class="fa-regular fa-comment"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa-regular fa-envelope"></i>
-                        </a>
-                        <a class="position-relative bell"  href="">
+
+
+                       
+                      <!-- start notes menu----------------------------------------------------------------------- -->
+
+                            <div class="messages-container position-relative " id="notes-container">
+                                  <i class="fa-regular fa-comment"></i>
+                                <ul class="messages-area position-absolute text-center" id="notes-area">
+                                    <div class="messages-header">
+                                        <h3> التعليقات </h3>
+                                    </div>
+
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/adminavaar.png" alt="">
+                                            <h4> كابتن ماجد</h4>
+                                        </div>
+                                         <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                 
+                                   <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/moukly.png" alt="">
+                                            <h4>  ماوكلي</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/sandibel.png" alt="">
+                                            <h4> ساندي بل </h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                     <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/konan.png" alt="">
+                                            <h4>  كونان</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                   
+                                    <!-- ----------------------------------------------------- -->
+                                    <a href="">كافة التعليقات </a>
+
+                                </ul>
+
+
+                            </div>
+                           
+
+                        <!-- end notes--------------------------------------------------------------------------- -->
+
+
+
+                        <!-- start messages menu----------------------------------------------------------------------- -->
+
+                            <div class="messages-container position-relative " id="messages-container">
+                                 <i class="fa-regular fa-envelope"></i>
+                                <ul class="messages-area position-absolute text-center" id="messages-area">
+                                    <div class="messages-header">
+                                        <h3> الرسائل </h3>
+                                    </div>
+
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/adminavaar.png" alt="">
+                                            <h4> كابتن ماجد</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                 
+                                   <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/moukly.png" alt="">
+                                            <h4>  ماوكلي</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/sandibel.png" alt="">
+                                            <h4> ساندي بل </h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                     <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/konan.png" alt="">
+                                            <h4>  كونان</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                 
+                                    <!-- ----------------------------------------------------- -->
+                                    <a href="">كافة الرسائل </a>
+
+                                </ul>
+
+
+                            </div>
+                           
+
+                        <!-- end messages--------------------------------------------------------------------------- -->
+
+
+
+                        <!-- <a class="position-relative bell"  href="">
                             <i class="fa-regular fa-bell"></i>
-                        </a>
+                        </a> -->
+ <!-- start bells menu----------------------------------------------------------------------- -->
+
+                            <div class="position-relative bell messages-container position-relative " id="bells-container">
+                                  <i class="fa-regular fa-bell "></i>
+                                <ul class="messages-area position-absolute text-center" id="bells-area">
+                                    <div class="messages-header">
+                                        <h3> التذكرات </h3>
+                                    </div>
+
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/adminavaar.png" alt="">
+                                            <h4> كابتن ماجد</h4>
+                                        </div>
+                                         <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                 
+                                   <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/moukly.png" alt="">
+                                            <h4>  ماوكلي</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/sandibel.png" alt="">
+                                            <h4> ساندي بل </h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                     <!-- -------------------------------------------------------- -->
+                                    <li class="d-flex align-items-center justify-content-between">                                        <div class="d-flex gap-2 item-menu-left">
+                                            <img width="40" src="assets/images/icons/konan.png" alt="">
+                                            <h4>  كونان</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                   
+                                    <!-- ----------------------------------------------------- -->
+                                    <a href="">كافة التذكيرات </a>
+
+                                </ul>
+
+
+                            </div>
+                           
+
+                        <!-- end bells--------------------------------------------------------------------------- -->
+
+
+
+
+
                         <a href="">
                             <i class="fa-solid fa-compress"></i>
                           
@@ -72,7 +236,7 @@
                     <!-- end avatar part  -->
 
                      <!-- start bar-icon -->
-                     <a href="">
+                     <a  data-bs-toggle="offcanvas" href="#users-online">
                          <i class="fa-solid fa-bars-staggered active-users"></i>
                       </a>
                     <!-- end bar-icon -->
@@ -105,100 +269,64 @@
               <ul class="ul-slidebar">
                    <li class="mb-2 active">
                        <i class="fa-solid fa-house-user  fs-5"></i>
-                       <a href="" class="m-r-10">الصفحة الرئيسية</a>
+                       <a href="index.html" class="m-r-10">الصفحة الرئيسية</a>
                    </li>
                    <li class="mb-2">
                     <i class="fa-solid fa-bottle-water  fs-5"></i>
                       
-                       <a href="" class="m-r-10" >تصنيفات المنتجات  </a>
+                       <a href="productsCatigoryes.html" class="m-r-10" >تصنيفات المنتجات  </a>
                    </li>
                    <li class="mb-2">
                         <i class="fa-solid fa-cubes-stacked  fs-5"></i>
                        
-                       <a href="" class="m-r-10"> المنتجات</a>
+                       <a href="products.html" class="m-r-10"> المنتجات</a>
                    </li>
-                    <li class="mb-2">
-                        <i class="fa-solid fa-bowl-rice fs-5"></i>
-                     
-                       <a href="" class="m-r-10"> الحبوب</a>
-                   </li>
-                   <li class="mb-2">
-                        <i class="fa-solid fa-seedling fs-5"></i>
-                        <a href="" class="m-r-10"> الخضار</a>
-                   </li>
-                   <li class="mb-2">
-                         <i class="fa-solid fa-jar fs-5"></i>
-                       <a href="" class="m-r-10"> المونة</a>
-                   </li>
-                   <li class="mb-2">
-                        <i class="fa-solid fa-shirt fs-5"></i>
-                        <a href="" class="m-r-10"> النسيج</a>
-                   </li>
-                   <li class="mb-2">
-                    <i class="fa-solid fa-utensils fs-5"></i>
-                     
-                       <a href="" class="m-r-10"> الوجبات</a>
-                   </li>
-                   <li class="mb-2">
-                    <i class="fa-solid fa-jar-wheat fs-5"></i>
-                      
-                       <a href="" class="m-r-10"> المربيات</a>
-                   </li>
-                   <li class="mb-2">
-                       <i class="fa-solid fa-house-user  fs-5"></i>
-                       <a href="" class="m-r-10"> احدث المنتجات</a>
-                   </li>
-                   <li class="mb-2">
-                       <i class="fa-solid fa-house-user  fs-5"></i>
-                       <a href="" class="m-r-10"> احدث المواد</a>
-                   </li>
-                   <li class="mb-2">
                    
-                      <i class="fa-solid fa-arrow-down-a-z fs-5"></i>
-                       <a href="" class="m-r-10">تبويب المنتجات</a>
+                    
+                   <li class="mb-2">
+                                            
+                       <i class="fa-solid fa-shield-halved fs-5"></i>
+                       <a href="blog.html" class="m-r-10"> المدونة</a>
                    </li>
+                 
+                  
+                 
                    <li class="mb-2">
                        
                         <i class="fa-solid fa-cart-shopping fs-5"></i>
-                       <a href="" class="m-r-10"> السلة</a>
+                       <a href="cart.html" class="m-r-10"> السلة</a>
                    </li>
                    <li class="mb-2">
                        <i class="fa-solid fa-house-user  fs-5"></i>
-                       <a href="" class="m-r-10"> فلاتر البحث</a>
+                       <a href="filters.html" class="m-r-10"> فلاتر البحث</a>
                    </li>
                    
                    <li class="mb-2">
                     <i class="fa-regular fa-bell-slash fs-5"></i>
                      
-                       <a href="" class="m-r-10"> العروض الاسبوعية</a>
+                       <a href="weklyOffers.html" class="m-r-10"> العروض الاسبوعية</a>
                    </li>
-                   <li class="mb-2">
-                       <i class="fa-solid fa-house-user  fs-5"></i>
-                       <a href="" class="m-r-10">اهم المنتجات</a>
-                   </li>
+                  
                    <li class="mb-2">
                     <i class="fa-solid fa-volume-high fs-5"></i>
-                       <a href="" class="m-r-10"> الدعاية والاعلان</a>
+                       <a href="Advertisements.html" class="m-r-10"> الدعاية والاعلان</a>
                    </li>
                    <li class="mb-2">
                        <i class="fa-solid fa-house-user  fs-5"></i>
-                       <a href="" class="m-r-10">حول المتجر</a>
+                       <a href="categoey-about.html" class="m-r-10">حول المتجر</a>
                    </li>
                    <li class="mb-2">
                     <i class="fa-solid fa-gear fs-5"></i>
-                       <a href="" class="m-r-10"> الاعدادات</a>
+                       <a href="settings.html" class="m-r-10"> الاعدادات</a>
                    </li>
                    <li class="mb-2">
                         <i class="fa-solid fa-user-tie fs-5"></i>
                        
-                       <a href="" class="m-r-10"> المستخدمين</a>
+                       <a href="users.html" class="m-r-10"> المستخدمين</a>
                    </li>
-                   <li class="mb-2">
-                    <i class="fa-solid fa-hand fs-5"></i>
-                      
-                       <i class="fa-solid fa-shield-halved fs-5"></i>
-                       <a href="" class="m-r-10"> الصلاحيات</a>
-                   </li>
+                 
+                  
+                    
                     
 
                   
@@ -302,6 +430,102 @@
      </div>
     <!-- -- end main container  ................................... -->
 
+
+    <!-- start offcanvas user online list============================================================================ -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="users-online" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header ">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">المستخدمين المتصلين </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="alert alert-success">
+        كافة المستخدمين النشطين 
+    </div>
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>ايمن الاحمد </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>سليم سالم </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>مروان سعد  </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>خالد الاحمد </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+    <div class="item-side-menue d-flex mb-3">
+        <div class="avatar-info position-relative">
+            <div style="width:10px ; height:10px " class="spinner-grow text-success grow-user" role="status">
+                 <span class="visually-hidden ">Loading...</span>
+            </div>
+            <img width ="50" src="assets/images/icons/adminavaar.png" alt="userPhoto">
+            <h4>محمد احمد </h4>
+        </div>
+       <div class="contact-info">
+            <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+            <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+        </div>
+    </div>
+    <!-- ................................................ -->
+    
+
+
+  </div>
+</div>
+ <!-- end offcanvas============================================================================== -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@8.3.1/dist/apexcharts.min.js"></script>
